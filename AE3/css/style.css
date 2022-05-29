@@ -1,38 +1,112 @@
-h1{
-    color: white;
+* {
     margin: 0;
-    margin-left: 15px;
-    position: absolute;
-    top: 50%;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-
+    padding: 0;
+    box-sizing: border-box;
 }
 
-h3{
-    align: left;
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background: gainsboro;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 header{
     width: 100%;
     height: 100px;
-    background: #bdc3c7;
-    background: -webkit-linear-gradient(to right, hsla(210, 30%, 24%, 0.603), hsla(204, 8%, 76%, 0.61)), url(../img/portada1.jpg);
-    background: linear-gradient(to right, hsla(210, 30%, 24%, 0.603), hsla(204, 8%, 76%, 0.61)), url(../img/portada1.jpg);
-    background-size: cover;
-    background-attachment: fixed;
-    position: relative;
+    background: #000000;
+    display: flex;
 }
+.logo{
+    padding: 33px 0;
+    max-width: 66px;
+    margin-left: 15px;
+}
+
+#titular{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+
+}
+
+h1{
+    color: white;
+
+}
+h2{
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+h4{
+    margin: 5px;
+}
+
+.principal{
+   background-color:  blueviolet;
+}
+
+.cargo{
+    background-color: grey;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+#id{
+    font-size: 2vw;
+}
+
 
 .jefatura{
     display: flex;
+    width: 100%;
+    background-color: gainsboro;
 }
 
-aside{
-    float: right;
+.block{
+    width: 50%;
+    border: black  solid 2px;
 }
-.profesores{
-    float: left;
+
+ul {
+    padding: 20px;
+    list-style-type: square;
+}
+
+li{
+    padding: 5px;
+    margin: 5px;
+    margin-left: 10px;
+}
+
+.container{
+    width: 100%;
+    background-color: gainsboro;
+    display: flex;
+    margin: auto;
+}
+table{
+    border-collapse: collapse;
+    width: 100%;
+    margin: 0;
+}
+
+th{
+
+    background-color: #8904aa;
+    color: white;
+    padding: 5px 0;
+  }
+td{
+    text-align: center;
+    padding: 10px 5px;
 }
 
 a:link, a:visited{
@@ -40,24 +114,88 @@ a:link, a:visited{
     color: white;
 }
 
-form{
-    font-family:'Open Sans Condensed', sans-serif;
-    width: 400px;
-    min-width:250px;
-    margin: 20px auto;
-    position: relative;
+.form-style-2{
+    margin: 0 auto; 
+	max-width: 75%;
+	padding: 20px 12px 10px 20px;
+	font: 13px Arial, Helvetica, sans-serif;
+    background-color: gainsboro;
+    
 }
 
-form .fieldset {
-    background-color:#d5d5d5;
-  
-    border-radius: 3px;
-    
-  }
+.form-style-2 label{
+	display: block;
+	margin: 0px 0px 15px 0px;
+}
+.form-style-2 label > span{
+	width: 100px;
+	font-weight: bold;
+	float: left;
+	padding-top: 8px;
+	padding-right: 5px;
+}
+.form-style-2 span.required{
+	color:rgb(233, 154, 8);
+}
+.form-style-2 .tel-number-field{
+	width: 40px;
+	text-align: center;
+}
+.form-style-2 input.input-field, .form-style-2 .select-field{
+	width: 48%;	
+}
+.form-style-2 input.input-field, 
+.form-style-2 .tel-number-field, 
+.form-style-2 .textarea-field, 
+.form-style-2 .select-field{
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	border: 1px solid #C2C2C2;
+	box-shadow: 1px 1px 4px #EBEBEB;
+	-moz-box-shadow: 1px 1px 4px #EBEBEB;
+	-webkit-box-shadow: 1px 1px 4px #EBEBEB;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	padding: 7px;
+	outline: none;
+}
+.form-style-2 .input-field:focus, 
+.form-style-2 .tel-number-field:focus, 
+.form-style-2 .textarea-field:focus,  
+.form-style-2 .select-field:focus{
+	border: 1px solid rgb(227, 3, 235);
+}
+.form-style-2 .textarea-field{
+	height:100px;
+	width: 55%;
+}
+.form-style-2 input[type=submit],
+.form-style-2 input[type=button]{
+	border: none;
+	padding: 8px 15px 8px 15px;
+	background: #8904aa;
+	color: #fff;
+	box-shadow: 1px 1px 4px #DADADA;
+	-moz-box-shadow: 1px 1px 4px #DADADA;
+	-webkit-box-shadow: 1px 1px 4px #DADADA;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+}
+.form-style-2 input[type=submit]:hover,
+.form-style-2 input[type=button]:hover{
+	background: #EA7B00;
+	color: #fff;
+}
 
 footer{
+    bottom:0;
+    width:100%;
+    height:150px; 
     background-color: blueviolet;
     color: white;
     text-align: center;
-    padding: 10px;
+    padding: 20px;
 }

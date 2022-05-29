@@ -10,20 +10,25 @@
 
             <body>
                 <header>
-                    <h1>
+                    <div class="logo"><a href="{/ite/@web}"><img src="img/edx_logo_edix.svg"  alt="edix"/></a></div>
+                    <h1 id="titular">
                         <a href="https://www.edix.com/es/">
                             <xsl:value-of select="/ite/@nombre" />
                         </a>
                     </h1>
                 </header>
 
-
+                <div class="principal">
+                    <h2>QUIÉNES SOMOS</h2>
+                </div>
                 <div class="jefatura">
                     <div class="block">
+                        <div class="cargo">
                         <h3>
                             Director:
                             <xsl:value-of select="/ite/director/nombre" />
                         </h3>
+                    </div>
                         <ul>
                             <li>
                                 <h4>Despacho: </h4>
@@ -36,10 +41,12 @@
                         </ul>
                     </div>
                     <div class="block">
+                        <div class="cargo">
                         <h3>
                             Jefe de Estudios:
                             <xsl:value-of select="/ite/jefe_estudiosr/nombre" />
                         </h3>
+                </div>
                         <ul>
                             <li>
                                 <h4>Despacho: </h4>
@@ -53,22 +60,24 @@
                     </div>
                 </div>
 
-                <div class="container">
-                <div class="profesores">
+            <div class="container">
+                <div class="block">
+                    <div class="cargo">
                     <h3>
                         Equipo Docente:
                         </h3>
-                    <table border="2">
+                    </div>
+                    <table>
                         <tr>
                             <th>ID</th>
                             <th>Profesor</th>
                         </tr>
                         <xsl:for-each select="/ite/profesores/profesor">
                             <tr>
-                                <td>
+                                <td id="id">
                                     <xsl:value-of select="id" />
                                 </td>
-                                <td>
+                                <td id="nombre">
                                     <xsl:value-of select="nombre" />
                                 </td>
                             </tr>
@@ -76,9 +85,11 @@
                     </table>
                 </div>
 
-                <div class="ciclos">
+                <div class="block">
+                    <div class="cargo">
                     <h3>Ciclos:</h3>
-                    <table border="2">
+                </div>
+                    <table>
                         <xsl:for-each select="/ite/ciclos/ciclo">
                             <tr>
                                 <th colspan="3">
@@ -101,25 +112,20 @@
                     </table>
                 </div>
             </div>
+            <div class="principal">
+                <h2>CONTACTA CON NOSOTROS</h2>
+            </div>
 
-                <form>
-
-                    <h3>Nombre:</h3>
-                    <input type="text" name="nombre" autofocus="" />
-
-
-                    <h3>Apellidos:</h3>
-                    <input type="text" name="apellidos" required="" />
-
-
-                    <h3>Email:</h3>
-                    <input type="email" name="email" required="" />
-
-
-                    <h3>Edad: </h3>
-                    <input type="number" min="18" max="120" name="edadNumber" placeholder="Escribe tu edad" required="" />
-                    <input type="submit" value="Enviar" />
+            <div class="form-style-2">
+                <form action="#" method="get">
+                <label for="nombre"><span>Nombre <span class="required">*</span></span><input type="text" class="input-field" name="nombre" value="" /></label>
+                <label for="apellidos"><span>Apellidos <span class="required">*</span></span><input type="text" class="input-field" name="apellidos" value="" /></label>
+                <label for="email"><span>Email <span class="required">*</span></span><input type="email" class="input-field" name="email" value="" /></label>
+                <label for="comentario"><span>Comentario <span class="required">*</span></span><textarea name="comment" class="textarea-field"></textarea></label>
+                
+                <label><span> </span><input type="submit" value="Enviar" /></label>
                 </form>
+                </div>
                 <footer>
                     <h4>
                         Telefono:
