@@ -35,11 +35,8 @@
                         </xsl:attribute>
                     <xsl:attribute name="despacho">
                     <xsl:value-of select="ite/director/despacho" />
-                    </xsl:attribute>
-                       
-
+                    </xsl:attribute>               
         </director>
-
         <jefe_estu>
 
             <xsl:attribute name="nombre">
@@ -48,7 +45,6 @@
             <xsl:attribute name="despacho">
             <xsl:value-of select="ite/jefe_estudios/despacho" />
             </xsl:attribute>
-
         </jefe_estu>
             <profesores>
                 <xsl:for-each select="ite/profesores/profesor">
